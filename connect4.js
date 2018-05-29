@@ -13,7 +13,9 @@ let currPlayer = 1;  // active player: 1 or 2
 let board = [];      // array of rows, each row is array of cells  (board[y][x])
 
 
-/** makeBoard: create in-JS board structure */
+/** makeBoard: create in-JS board structure: 
+ *    board = array of rows, each row is array of cells  (board[y][x]) 
+ */
 
 function makeBoard() {
   for (let y = 0; y < HEIGHT; y++) {
@@ -43,7 +45,7 @@ function makeHtmlBoard() {
   }
 }
 
-/** findSpotForCol: given a column x, find top available y (null if filled) */
+/** findSpotForCol: given column x, return top empty y (null if filled) */
 
 function findSpotForCol(x) {
   for (let y = HEIGHT - 1; y >= 0; y--) {
@@ -54,7 +56,7 @@ function findSpotForCol(x) {
   return null;
 }
 
-/** placeInTable: place piece into HTML board */
+/** placeInTable: update DOM to place piece into HTML board */
 
 function placeInTable(y, x) {
   const piece = $(`<div class="piece p${currPlayer}">`);
@@ -110,7 +112,9 @@ function handleClick(e) {
 function checkForWin() {
 
   function _win(cells) {
-    // check four cells to see if they're all color of current player
+    // Check four cells to see if they're all color of current player
+    //  - cells: list of four (y, x) cells
+    //  - returns true if all are legal coordinates & all match currPlayer
 
     return cells.every(([y, x]) =>
       y >= 0 && y < HEIGHT && x >= 0 && x < WIDTH && board[y][x] === currPlayer
