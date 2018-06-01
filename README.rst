@@ -36,7 +36,7 @@ for this game.
 Step Two: HTML
 --------------
 
-Take a look at the starting HTML provided, `index.html`. There are several **TODO**'
+Take a look at the starting HTML provided, ``index.html``. There are several **TODO**
 comments of changes to make to use the starter CSS/JS and to bring in jQuery.
 
 Step Three: makeBoard
@@ -110,7 +110,7 @@ Congratulations!
 Optional Step Nine: Read & Comment checkForWin
 ----------------------------------------------
 
-THe `checkForWin` function is already written, but it needs comments to help
+The `checkForWin` function is already written, but it needs comments to help
 explain how it works. Add some!
 
 Also, this is a good strategy for finding a winner, but it's not the most
