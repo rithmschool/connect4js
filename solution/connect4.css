@@ -1,0 +1,38 @@
+/* game board table */
+
+td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+  /* need to position relative so pieces can be positioned absolutely within */
+  position: relative;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+}
+
+.piece.p1 {
+  background-color: red;
+}
+
+.piece.p2 {
+  background-color: blue;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+.column-top td {
+  border: dashed 1px gray;
+}
+
+.column-top td:hover {
+  background-color: gold;
+}
